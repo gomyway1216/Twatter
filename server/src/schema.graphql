@@ -1,0 +1,43 @@
+# import * from "./generated/prisma.graphql"
+
+type Query {
+  me: User!
+  feed(
+    where: TweetWhereInput
+    orderBy: TweetOrderByInput
+    skip: Int
+    after: String
+    before: String
+    first: Int
+    last: Int
+  ): [Tweet]!
+  tweet(id: ID!): Tweet
+  users: [User!]!
+}
+
+type Mutation {
+  signup(
+    email: String!
+    username: String!
+    password: String!
+    name: String!
+  ): AuthPayload!
+  login(email: String!, password: String!): AuthPayload!
+  createTweet(text: String!): Tweet!
+  follow(username: String!): User!
+}
+
+type AuthPayload {
+  token: String!
+  user: User!
+}
+
+type User {
+  id: ID!
+  username: String!
+  email: String!
+  name: String!
+  tweets: [Tweet!]!
+  followers: [User!]!
+  following: [User!]!
+}

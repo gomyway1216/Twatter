@@ -1,0 +1,10 @@
+disableAuth: true
+endpoint: https://eu1.prisma.sh/yudai-yaguchi-5d71cb/twatter/dev
+datamodel: datamodel.graphql
+
+
+hooks:
+  post-deploy:
+    - graphql get-schema -p database
+    - graphql prepare
+    - graphql codegen

@@ -1,0 +1,15 @@
+{
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "src/**/**/*.tsx",
+      "src/**/**/*.ts",
+      "src/**/*.tsx",
+      "src/*.tsx"
+    ]
+  },
+  "rules": {
+    "no-console": false
+  }
+}

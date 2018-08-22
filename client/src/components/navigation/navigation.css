@@ -1,0 +1,23 @@
+.navigation {
+  height: 70px;
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+img {
+  height: 100%;
+  width: 60px;
+}
+
+/* body {
+  display: flex;
+} */
+
+.navigation {
+  display: flex;
+  /* margin-left: 20px;
+   */
+  padding-left: 20px;
+  padding-right: 20px;
+}
